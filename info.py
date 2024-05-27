@@ -16,14 +16,21 @@ def is_enabled(value, default):
     else:
         return default
 
+BOT_TOKEN="6304284700:AAGAk1hLAsNCVQjaP2YvgzrK1LkbJfSva6k"
+API_ID=13216322
+API_HASH="15e5e632a8a0e52251ac8c3ccbe462c7"
+CHANNELS=-1002155910964
+DATABASE_URI="mongodb+srv://new-user31:Qwerty_1234@cluster0.rw7ydev.mongodb.net/"
+ADMINS=7170648639
+#DATABASE_NAME="MOVIESXXX"
 
 # Bot information
 PORT = environ.get("PORT", "8080")
 WEBHOOK = bool(environ.get("WEBHOOK", True)) # for web support on/off
 SESSION = environ.get('SESSION', 'Media_search')
-API_ID = int(environ['API_ID'])
+"""API_ID = int(environ['API_ID'])
 API_HASH = environ['API_HASH']
-BOT_TOKEN = environ['BOT_TOKEN']
+BOT_TOKEN = environ['BOT_TOKEN']"""
 
 # Bot settings
 CACHE_TIME = int(environ.get('CACHE_TIME', 300))
@@ -32,17 +39,22 @@ PICS = (environ.get('PICS' ,'https://graph.org/file/01ddfcb1e8203879a63d7.jpg ht
 BOT_START_TIME = time()
 
 # Admins, Channels & Users
-ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '').split()]
+"""ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '').split()]
 CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '0').split()]
 auth_users = [int(user) if id_pattern.search(user) else user for user in environ.get('AUTH_USERS', '').split()]
 AUTH_USERS = (auth_users + ADMINS) if auth_users else []
 auth_channel = environ.get('AUTH_CHANNEL')
 auth_grp = environ.get('AUTH_GROUP')
 AUTH_CHANNEL = int(auth_channel) if auth_channel and id_pattern.search(auth_channel) else None
-AUTH_GROUPS = [int(ch) for ch in auth_grp.split()] if auth_grp else None
+AUTH_GROUPS = [int(ch) for ch in auth_grp.split()] if auth_grp else None"""
+
+AUTH_USERS=7170648639
+AUTH_CHANNEL=-1002155910964
+
 
 # MongoDB information
-DATABASE_URI = environ.get('DATABASE_URI', "")
+#DATABASE_URI = environ.get('DATABASE_URI', "")
+
 DATABASE_NAME = environ.get('DATABASE_NAME', "Cluster0")
 COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Telegram_files')
 
